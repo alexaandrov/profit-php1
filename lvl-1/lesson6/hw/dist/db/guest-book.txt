@@ -18,3 +18,5 @@ Lira
 Lira
 Lira
 Lira
+Ajax
+Ajax

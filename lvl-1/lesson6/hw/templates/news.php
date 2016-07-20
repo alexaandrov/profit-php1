@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Main page</title>
+    <title>News</title>
 </head>
 
 <style>
@@ -75,16 +75,15 @@
 
 <header>
     <ul>
-        <li><a href="">Main</a></li>
-        <li><a href="">News</a></li>
-        <li><a href="">Other</a></li>
-        <li><a href="">Other</a></li>
-        <li><a href="">Other</a></li>
+        <li><a href="index.php">Main</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="guestbook.php">Guestbook</a></li>
+        <li><a href="uploader.php">Uploader</a></li>
     </ul>
 </header>
 
 <h1>News</h1>
-<form action="index.php" method="GET">
+<form method="GET">
     <input type="text" name="note" value="<?php if (!empty($_GET['note'])) echo $_GET['note'] ?>">
     <input type="submit" value="Отправить">
 </form>

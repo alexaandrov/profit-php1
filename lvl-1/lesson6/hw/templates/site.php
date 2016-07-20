@@ -1,14 +1,16 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>GuestBook</title>
+    <title>Main page</title>
 </head>
+
 <style>
     body {
         max-width: 980px;
         margin: 0 auto;
         padding: 0;
         outline: none;
-        /*background-image: url("dist/img/background.jpg");*/
+        background-image: url("dist/img/background.jpg");
         background-position: bottom;
     }
 
@@ -54,7 +56,7 @@
     }
     article:hover {
         border: 1px solid #008419;
-        cursor: pointer;
+        /*cursor: pointer;*/
     }
     input {
         padding: 0.5em;
@@ -70,6 +72,7 @@
     }
 </style>
 <body>
+
 <header>
     <ul>
         <li><a href="index.php">Main</a></li>
@@ -78,17 +81,6 @@
         <li><a href="uploader.php">Uploader</a></li>
     </ul>
 </header>
-<h1>Guest Book</h1>
-<form method="GET">
-    <input type="text" name="note" value="<?php if (!empty($_GET['note'])) echo $_GET['note'] ?>">
-    <input type="submit" value="Отправить">
-</form>
-<p>Записи в гостевой книге:</p>
-<?php
-$value->upload();
-?>
-<?php foreach ($value->getData() as $file_string): ?>
-    <article><?= $file_string ?></article>
-<?php endforeach ?>
+
 </body>
 </html>

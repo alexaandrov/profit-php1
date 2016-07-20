@@ -49,6 +49,15 @@
 
 <body>
 
+<header>
+    <ul>
+        <li><a href="index.php">Main</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="guestbook.php">Guestbook</a></li>
+        <li><a href="uploader.php">Uploader</a></li>
+    </ul>
+</header>
+
 <h1>Новость номер <?= $value->getId(); ?></h1>
 <article><?= $value->getArticle($value->getId()); ?></article>
 
