@@ -8,12 +8,13 @@ class GuestBook
 
     protected $data;
 
-    public function __construct(...$args)
+    public function __construct($file_address, $field_form_name)
     {
-        $this->file_address = $args[0];
-        $this->field_form_name = $args[1];
+        $this->file_address = $file_address;
+        $this->field_form_name = $field_form_name;
         $this->data = file($this->file_address);
     }
+
 
     public function getData()
     {
