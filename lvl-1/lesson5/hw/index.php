@@ -15,7 +15,6 @@ class GuestBook
         $this->data = file($this->file_address);
     }
 
-
     public function getData()
     {
         return $this->data;
