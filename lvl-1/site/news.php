@@ -8,4 +8,4 @@ $news = new News(__DIR__ . '/dist/db/news.txt', 'note');
 
 $view = new View();
 $view->assign('news', $news);
-$view->display('news');
+$view->display(__DIR__ . '/templates/' . 'news.php');

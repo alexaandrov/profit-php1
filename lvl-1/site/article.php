@@ -8,4 +8,4 @@ $article = new Article(__DIR__ . '/dist/db/news.txt', $_GET['id']);
 $view = new View();
 
 $view->assign('article', $article);
-$view->display('article');
+$view->display(__DIR__ . '/templates/' . 'article.php');

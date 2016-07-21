@@ -90,10 +90,10 @@
 
 <p>Новости:</p>
 <?php
-$value->upload();
+$news->upload();
 ?>
-<?php foreach ($value->getData() as $key => $file_string): ?>
-    <a href="<?= 'article.php?id=' . $key ?>"><article><?= $file_string ?></article></a>
+<?php foreach ($news->getData() as $id => $note): ?>
+    <a href="<?= 'article.php?id=' . $id ?>"><article><?= $note ?></article></a>
 <?php endforeach ?>
 
 </body>

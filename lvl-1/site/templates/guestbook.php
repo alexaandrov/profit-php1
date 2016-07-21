@@ -33,7 +33,7 @@
     header ul li {
         list-style-type: none;
         display: inline-block;
-        padding: 15px 0px;`
+        padding: 15px 0px;
         margin: 0;
     }
     header ul li a {
@@ -85,10 +85,10 @@
 </form>
 <p>Записи в гостевой книге:</p>
 <?php
-$value->upload();
+$guestbook->upload();
 ?>
-<?php foreach ($value->getData() as $file_string): ?>
-    <article><?= $file_string ?></article>
+<?php foreach ($guestbook->getData() as $note): ?>
+    <article><?= $note ?></article>
 <?php endforeach ?>
 </body>
 </html>

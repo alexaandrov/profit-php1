@@ -35,7 +35,7 @@
     header ul li {
         list-style-type: none;
         display: inline-block;
-        padding: 15px 0px;`
+        padding: 15px 0px;
         margin: 0;
     }
     header ul li a {
@@ -58,8 +58,8 @@
     </ul>
 </header>
 
-<h1>Новость номер <?= $value->getId(); ?></h1>
-<article><?= $value->getArticle($value->getId()); ?></article>
+<h1>Новость номер <?= $article->getId(); ?></h1>
+<article><?= $article->getArticle($article->getId()); ?></article>
 
 </body>
 </html>

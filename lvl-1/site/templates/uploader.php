@@ -87,6 +87,6 @@
     <input type="submit" value="Отправить">
 </form>
 <p>Статус:</p>
-<?php echo ($value->upload()) ? "Файл загружен" : "Файл не загружен"; ?>
+<?php echo ($uploader->upload()) ? "Файл загружен" : "Файл не загружен"; ?>
 </body>
 </html>

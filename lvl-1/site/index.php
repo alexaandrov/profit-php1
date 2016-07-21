@@ -23,5 +23,5 @@ $sth->execute([':age' => 40]);
 $data = $sth->fetchAll();
 
 $view = new View();
-$view->assign('site', $data);
-$view->display('site');
+$view->assign('persons', $data);
+$view->display(__DIR__ . '/templates/' . 'site.php');

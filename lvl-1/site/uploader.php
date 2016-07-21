@@ -7,4 +7,4 @@ $uploader = new Uploader('upload-file', __DIR__ . '/dist/img/');
 
 $view = new View();
 $view->assign('uploader', $uploader);
-$view->display('uploader');
+$view->display(__DIR__ . '/templates/' . 'uploader.php');

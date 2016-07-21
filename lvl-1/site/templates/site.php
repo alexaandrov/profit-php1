@@ -35,7 +35,7 @@
     header ul li {
         list-style-type: none;
         display: inline-block;
-        padding: 15px 0px;`
+        padding: 15px 0px;
         margin: 0;
     }
     header ul li a {
@@ -82,7 +82,7 @@
     </ul>
 </header>
 
-<?php foreach ($value as $person): ?>
+<?php foreach ($persons as $person): ?>
     <article><?= $person['firstName'] ?></article>
 <?php endforeach ?>
 
