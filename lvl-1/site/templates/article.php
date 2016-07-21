@@ -14,7 +14,11 @@
         background-position: bottom;
         font-family: Calibri;
     }
-
+    h1{
+        margin: 0 auto;
+        margin-bottom: 20px;
+        font-family: "Calibri Light";
+    }
     a {
         outline: none;
         color: black;
@@ -47,6 +51,14 @@
     header ul li a:hover {
         background-color: #D7D7D7;
     }
+    article {
+        background-color: #F8F8F8;
+        box-shadow: 0px 2px 4px #545454;
+        /*border: 1px #3ED248 dotted;*/
+        /*border-radius: 3px;*/
+        margin: 15px 0;
+        padding: 10px;
+    }
 </style>
 
 <body>
@@ -60,8 +72,11 @@
     </ul>
 </header>
 
-<h1>Новость номер <?= $book->getId(); ?></h1>
-<article><?= $book->getArticle($book->getId()); ?></article>
+
+<article>
+    <h1>Article #<?= $book->getId(); ?></h1>
+    <?= $book->getArticle($book->getId()); ?>
+</article>
 
 </body>
 </html>

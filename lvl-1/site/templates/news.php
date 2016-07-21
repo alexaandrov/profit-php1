@@ -37,7 +37,7 @@
     header ul li {
         list-style-type: none;
         display: inline-block;
-        padding: 15px 0px;`
+        padding: 15px 0px;
         margin: 0;
     }
     header ul li a {
