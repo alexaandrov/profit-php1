@@ -1,5 +1,7 @@
 <?php
 
+namespace Models;
+
 class Notes
 {
     protected $field_form_name;

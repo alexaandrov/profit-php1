@@ -1,10 +1,9 @@
 <?php
 
-require __DIR__ . '/../classes/View.php';
-require __DIR__ . '/../classes/GuestBook.php';
+require __DIR__ . '/../autoload.php';
 
-$guestBook = new GuestBook(__DIR__ . '/../dist/db/guest-book.txt', 'note');
+$guestbook = new \Models\GuestBook(__DIR__ . '/../dist/db/guest-book.txt', 'note');
 
 $view = new View();
-$view->assign('guestbook', $guestBook);
+$view->assign('guestbook', $guestbook);
 $view->display(__DIR__ . '/../templates/'. 'guestbook.php');
