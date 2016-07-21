@@ -105,8 +105,6 @@
     }
     input[type="submit"] {
         box-shadow: 0px 1px 2px #F8F8F8;
-
-        background-color: ;
         color: white;
         padding: 0.7em 20px;
         border: none;
