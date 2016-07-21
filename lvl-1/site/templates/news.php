@@ -92,12 +92,12 @@
     <input type="submit" value="Отправить">
 </form>
 
-<p>Новости:</p>
 <?php
 $news->upload();
 ?>
-<?php foreach ($news->getData() as $id => $note): ?>
-    <a href="<?= 'article.php?id=' . $id ?>"><article><?= $note ?></article></a>
+<?php foreach ($news->getData() as $note): ?>
+    <h2><?php echo $note['name'] ?></h2>
+    <a href="<?= 'article.php?id=' .$note['id'] ?>"><article><?= $note['text'] ?></article></a>
 <?php endforeach ?>
 
 </body>

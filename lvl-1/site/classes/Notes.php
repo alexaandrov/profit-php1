@@ -12,7 +12,11 @@ class Notes
     {
         $this->file_address = $file_address;
         $this->field_form_name = $field_form_name;
-        $this->data = file($this->file_address);
+        if (is_array($file_address)) {
+            $this->data = $file_address;
+        } else {
+            $this->data = file($this->file_address);
+        }
     }
 
     public function getData()

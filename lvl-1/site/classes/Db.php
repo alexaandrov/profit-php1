@@ -13,7 +13,7 @@ class Db
         );
     }
 
-    public function execute(string $sql)
+    protected function execute(string $sql)
     {
         if ($this->dbh->prepare($sql)) {
             return true;
@@ -22,11 +22,11 @@ class Db
         }
     }
 
-    public function query(string $sql, array $data)
+    public function query(string $sql, array $data = null)
     {
         if ($this->execute($sql)) {
-            $sth = $this->dbh->prepare($sql, $data);
-            $sth->execute();
+            $sth = $this->dbh->prepare($sql);
+            $sth->execute($data);
             return $sth->fetchAll();
         } else {
             return false;

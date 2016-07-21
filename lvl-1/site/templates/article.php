@@ -72,10 +72,10 @@
     </ul>
 </header>
 
-
 <article>
-    <h1>Article #<?= $article->getId(); ?></h1>
-    <?= $article->getArticle($article->getId()); ?>
+    <?php $note = $article->getArticle(); ?>
+    <h1>Article #<?php echo $note['id'] . ' ' . $note['name'] ?></h1>
+    <p><?= $note['text']; ?></p>
 </article>
 
 </body>

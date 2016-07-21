@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/../classes/Notes.php';
+
 class Article
 {
     protected $id;
@@ -8,11 +10,15 @@ class Article
 
     protected $file_address;
 
-    public function __construct($file_address, $id)
+    public function __construct($file_address, $id= null)
     {
         $this->file_address = $file_address;
         $this->id = $id;
-        $this->data = file($this->file_address);
+        if (is_array($file_address)) {
+            $this->data = $file_address;
+        } else {
+            $this->data = file($this->file_address);
+        }
     }
 
     public function getId()
@@ -20,8 +26,8 @@ class Article
         return $this->id;
     }
 
-    public function getArticle($id)
+    public function getArticle($id = null)
     {
-        return $this->data[$this->getId()];
+        return (empty($this->id)) ? $this->data[0] : $this->data[$this->getId()];
     }
 }
