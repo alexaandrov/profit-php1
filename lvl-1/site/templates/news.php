@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Main page</title>
+    <title>News</title>
 </head>
 
 <style>
@@ -82,8 +82,18 @@
     </ul>
 </header>
 
-<?php foreach ($value as $person): ?>
-    <article><?= $person['firstName'] ?></article>
+<h1>News</h1>
+<form method="GET">
+    <input type="text" name="note" value="<?php if (!empty($_GET['note'])) echo $_GET['note'] ?>">
+    <input type="submit" value="Отправить">
+</form>
+
+<p>Новости:</p>
+<?php
+$value->upload();
+?>
+<?php foreach ($value->getData() as $key => $file_string): ?>
+    <a href="<?= 'article.php?id=' . $key ?>"><article><?= $file_string ?></article></a>
 <?php endforeach ?>
 
 </body>

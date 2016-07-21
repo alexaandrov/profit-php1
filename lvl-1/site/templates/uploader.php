@@ -1,9 +1,7 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Main page</title>
+    <title>Uploader</title>
 </head>
-
 <style>
     body {
         max-width: 980px;
@@ -56,7 +54,7 @@
     }
     article:hover {
         border: 1px solid #008419;
-        /*cursor: pointer;*/
+        cursor: pointer;
     }
     input {
         padding: 0.5em;
@@ -82,9 +80,13 @@
     </ul>
 </header>
 
-<?php foreach ($value as $person): ?>
-    <article><?= $person['firstName'] ?></article>
-<?php endforeach ?>
-
+<h1>Uploader</h1>
+<p>Выбирете файл</p>
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="upload-file">
+    <input type="submit" value="Отправить">
+</form>
+<p>Статус:</p>
+<?php echo ($value->upload()) ? "Файл загружен" : "Файл не загружен"; ?>
 </body>
 </html>

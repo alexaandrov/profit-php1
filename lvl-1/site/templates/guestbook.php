@@ -1,9 +1,7 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Main page</title>
+    <title>GuestBook</title>
 </head>
-
 <style>
     body {
         max-width: 980px;
@@ -56,7 +54,7 @@
     }
     article:hover {
         border: 1px solid #008419;
-        /*cursor: pointer;*/
+        cursor: pointer;
     }
     input {
         padding: 0.5em;
@@ -72,7 +70,6 @@
     }
 </style>
 <body>
-
 <header>
     <ul>
         <li><a href="index.php">Main</a></li>
@@ -81,10 +78,17 @@
         <li><a href="uploader.php">Uploader</a></li>
     </ul>
 </header>
-
-<?php foreach ($value as $person): ?>
-    <article><?= $person['firstName'] ?></article>
+<h1>Guest Book</h1>
+<form method="GET">
+    <input type="text" name="note" value="<?php if (!empty($_GET['note'])) echo $_GET['note'] ?>">
+    <input type="submit" value="Отправить">
+</form>
+<p>Записи в гостевой книге:</p>
+<?php
+$value->upload();
+?>
+<?php foreach ($value->getData() as $file_string): ?>
+    <article><?= $file_string ?></article>
 <?php endforeach ?>
-
 </body>
 </html>
