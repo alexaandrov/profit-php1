@@ -10,7 +10,7 @@ class View
 
     public function get_model_name()
     {
-        (!empty($name)) ? $name : 'index.php';
+        (!empty($name)) ? $name : 'index';
     }
 
     public function assign($name, $value)
@@ -23,11 +23,11 @@ class View
     {
         $model = $this;
         $value = $this->data[$template];
-        include __DIR__ . '/../templates/' . $template;
+        include __DIR__ . '/../templates/' . $template . '.php';
     }
 
     public function render($template)
     {
-        return __DIR__ . '/../templates/' . $template;
+        return __DIR__ . '/../templates/' . $template . '.php';
     }
 }

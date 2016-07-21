@@ -10,7 +10,7 @@
         margin: 0 auto;
         padding: 0;
         outline: none;
-        background-image: url("dist/img/background.jpg");
+        /*background-image: url("dist/img/background.jpg");*/
         background-position: bottom;
     }
 
@@ -81,6 +81,10 @@
         <li><a href="uploader.php">Uploader</a></li>
     </ul>
 </header>
+
+<?php foreach ($value as $person): ?>
+    <article><?= $person['firstName'] ?></article>
+<?php endforeach ?>
 
 </body>
 </html>
