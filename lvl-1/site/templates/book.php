@@ -73,8 +73,8 @@
 </header>
 
 <article>
-    <h1>Запись номер <?= $article->getId(); ?></h1>
-    <?= $article->getArticle($article->getId()); ?>
+    <h1>Запись номер <?= $book->getId(); ?></h1>
+    <?= $book->getArticle($book->getId()); ?>
 </article>
 
 </body>
