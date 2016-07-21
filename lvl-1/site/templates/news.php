@@ -84,7 +84,7 @@
 
 <h1>News</h1>
 <form method="GET">
-    <input type="text" name="note" value="<?php if (!empty($_GET['note'])) echo $_GET['note'] ?>">
+    <input type="text" name="note">
     <input type="submit" value="Отправить">
 </form>
 
