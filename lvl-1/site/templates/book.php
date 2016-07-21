@@ -53,7 +53,7 @@
     }
     article {
         background-color: #F8F8F8;
-        box-shadow: 0px 2px 4px #545454;
+        box-shadow: 0px 1px 2px #545454;
         /*border: 1px #3ED248 dotted;*/
         /*border-radius: 3px;*/
         margin: 15px 0;

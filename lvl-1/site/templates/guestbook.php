@@ -10,13 +10,16 @@
         outline: none;
         /*background-image: url("dist/img/background.jpg");*/
         background-position: bottom;
-        font-family: Calibri;
-        /*color: #7d7d7d;*/
+        font-family: "Segoe UI";
+    }
+    h1 {
+        font-family: "Segoe UI Light";
+        color: #7d7d7d;
     }
     h2  {
-        font-family: "Calibri Light";
+        font-family: "Segoe UI Light";
         font-size: 1em;
-        margin: 0;
+        margin-top: 5px;
         margin-bottom: 20px;
     }
     a {
@@ -56,7 +59,7 @@
     }
     article {
         background-color: #F8F8F8;
-        box-shadow: 0px 2px 4px #545454;
+        box-shadow: 0px 1px 2px #545454;
         /*border: 1px #3ED248 dotted;*/
         /*border-radius: 3px;*/
         margin: 15px 0;
@@ -64,8 +67,11 @@
     }
     article:hover {
         /*border: 1px solid #008419;*/
-        box-shadow: 0px 4px 4px #545454;
+        box-shadow: 0px 1px 8px #545454;
         cursor: pointer;
+    }
+    article p {
+        font-size: 0.9em;
     }
     input {
         padding: 0.5em;
@@ -105,7 +111,7 @@ $guestbook->upload();
         <a href="<?= 'book.php?id=' . $id ?>">
             <article>
                 <h2>Запись номер: <?= $id ?></h2>
-                <?= $note ?>
+                <p><?= $note ?></p>
             </article>
         </a>
     <?php endif ?>
