@@ -74,8 +74,8 @@
 
 
 <article>
-    <h1>Article #<?= $book->getId(); ?></h1>
-    <?= $book->getArticle($book->getId()); ?>
+    <h1>Article #<?= $article->getId(); ?></h1>
+    <?= $article->getArticle($article->getId()); ?>
 </article>
 
 </body>

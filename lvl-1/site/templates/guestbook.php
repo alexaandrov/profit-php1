@@ -13,7 +13,12 @@
         font-family: Calibri;
         /*color: #7d7d7d;*/
     }
-
+    h2  {
+        font-family: "Calibri Light";
+        font-size: 1em;
+        margin: 0;
+        margin-bottom: 20px;
+    }
     a {
         outline: none;
         color: black;
@@ -97,7 +102,12 @@ $guestbook->upload();
 ?>
 <?php foreach ($guestbook->getData() as $id => $note): ?>
     <?php if (!empty($note)) : ?>
-        <a href="<?= 'book.php?id=' . $id ?>"><article><?= $note ?></article></a>
+        <a href="<?= 'book.php?id=' . $id ?>">
+            <article>
+                <h2>Запись номер: <?= $id ?></h2>
+                <?= $note ?>
+            </article>
+        </a>
     <?php endif ?>
 <?php endforeach ?>
 </body>
