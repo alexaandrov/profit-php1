@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Main page</title>
+    <title>Note</title>
 </head>
 
 <style>
@@ -12,11 +12,13 @@
         outline: none;
         /*background-image: url("../../dist/img/background.jpg");*/
         background-position: bottom;
+        font-family: Calibri;
     }
 
     a {
         outline: none;
         color: black;
+        text-decoration: none;
     }
 
     header {
@@ -51,15 +53,15 @@
 
 <header>
     <ul>
-        <li><a href="index.php">Main</a></li>
+        <li><a href="site.php">Home</a></li>
         <li><a href="news.php">News</a></li>
         <li><a href="guestbook.php">Guestbook</a></li>
         <li><a href="uploader.php">Uploader</a></li>
     </ul>
 </header>
 
-<h1>Новость номер <?= $article->getId(); ?></h1>
-<article><?= $article->getArticle($article->getId()); ?></article>
+<h1>Новость номер <?= $book->getId(); ?></h1>
+<article><?= $book->getArticle($book->getId()); ?></article>
 
 </body>
 </html>

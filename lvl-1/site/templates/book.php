@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Main page</title>
+    <title>Book</title>
 </head>
 
 <style>
@@ -10,7 +10,7 @@
         margin: 0 auto;
         padding: 0;
         outline: none;
-        /*background-image: url("dist/img/background.jpg");*/
+        /*background-image: url("../../dist/img/background.jpg");*/
         background-position: bottom;
         font-family: Calibri;
     }
@@ -47,32 +47,8 @@
     header ul li a:hover {
         background-color: #D7D7D7;
     }
-    h1 {
-        text-align: center;
-    }
-    article {
-        border: 1px #3ED248 dotted;
-        border-radius: 3px;
-        margin: 15px 0;
-        padding: 10px;
-    }
-    article:hover {
-        border: 1px solid #008419;
-        /*cursor: pointer;*/
-    }
-    input {
-        padding: 0.5em;
-    }
-    input[type="submit"] {
-        background-color: #656765;
-        color: white;
-        padding: 0.5em 20px;
-    }
-    input[type="submit"]:hover {
-        background-color: #A2A2A2;
-        cursor: pointer;
-    }
 </style>
+
 <body>
 
 <header>
@@ -84,7 +60,8 @@
     </ul>
 </header>
 
-<h1>Welcome</h1>
+<h1>Запись номер <?= $book->getId(); ?></h1>
+<article><?= $book->getArticle($book->getId()); ?></article>
 
 </body>
 </html>

@@ -10,11 +10,13 @@
         outline: none;
         /*background-image: url("dist/img/background.jpg");*/
         background-position: bottom;
+        font-family: Calibri;
     }
 
     a {
         outline: none;
         color: black;
+        text-decoration: none;
     }
 
     header {
@@ -33,7 +35,7 @@
     header ul li {
         list-style-type: none;
         display: inline-block;
-        padding: 15px 0px;`
+        padding: 15px 0px;
         margin: 0;
     }
     header ul li a {
@@ -60,9 +62,11 @@
         padding: 0.5em;
     }
     input[type="submit"] {
-        background-color: #656765;
+        background-color: #4b4f67;
         color: white;
         padding: 0.5em 20px;
+        border: none;
+        border-radius: 3px;
     }
     input[type="submit"]:hover {
         background-color: #A2A2A2;
@@ -73,7 +77,7 @@
 
 <header>
     <ul>
-        <li><a href="index.php">Main</a></li>
+        <li><a href="site.php">Home</a></li>
         <li><a href="news.php">News</a></li>
         <li><a href="guestbook.php">Guestbook</a></li>
         <li><a href="uploader.php">Uploader</a></li>

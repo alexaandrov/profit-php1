@@ -10,11 +10,13 @@
         outline: none;
         /*background-image: url("dist/img/background.jpg");*/
         background-position: bottom;
+        font-family: Calibri;
     }
 
     a {
         outline: none;
         color: black;
+        text-decoration: none;
     }
 
     header {
@@ -60,9 +62,11 @@
         padding: 0.5em;
     }
     input[type="submit"] {
-        background-color: #656765;
+        background-color: #4b4f67;
         color: white;
         padding: 0.5em 20px;
+        border: none;
+        border-radius: 3px;
     }
     input[type="submit"]:hover {
         background-color: #A2A2A2;
@@ -72,7 +76,7 @@
 <body>
 <header>
     <ul>
-        <li><a href="index.php">Main</a></li>
+        <li><a href="site.php">Home</a></li>
         <li><a href="news.php">News</a></li>
         <li><a href="guestbook.php">Guestbook</a></li>
         <li><a href="uploader.php">Uploader</a></li>
@@ -87,8 +91,8 @@
 <?php
 $guestbook->upload();
 ?>
-<?php foreach ($guestbook->getData() as $note): ?>
-    <article><?= $note ?></article>
+<?php foreach ($guestbook->getData() as $id => $note): ?>
+        <a href="<?= 'book.php?id=' . $id ?>"><article><?= $note ?></article></a>
 <?php endforeach ?>
 </body>
 </html>
